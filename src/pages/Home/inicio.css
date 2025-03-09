@@ -11,13 +11,16 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    font-size: 16px; /* Ajuste no tamanho da fonte base */
 }
 
+/* Cabeçalho */
 header {
     background-color: #333;
     color: white;
     padding: 10px 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
 header nav ul {
@@ -32,28 +35,60 @@ header nav ul li {
 header nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
 }
-.banner {
-    background-image: url('https://via.placeholder.com/1500x600');
+
+header nav ul li a:hover {
+    color: #ff6347; /* Cor do link ao passar o mouse */
+}
+
+/* Seção inicial com banner */
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Usa a altura total da tela */
+    background-image: url(/assets/images/fundo.img.jpg); 
     background-size: cover;
-    text-align: center;
-    padding: 100px 0;
+    background-position: center center;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.banner {
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Sombra suave */
 }
 
 .banner h1 {
-    font-size: 50px;
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .banner p {
-    font-size: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
+/* Seções de conteúdo */
 section {
     padding: 50px 20px;
     text-align: center;
 }
 
+/* Estilos para os planos de assinatura */
 #planos .planos-container {
     display: flex;
     justify-content: center;
@@ -66,6 +101,11 @@ section {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#planos .plano:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
 #planos .plano h3 {
@@ -79,9 +119,14 @@ section {
     margin-top: 10px;
 }
 
+/* Formulário de contato */
 #contato form {
     max-width: 500px;
     margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 #contato label {
@@ -89,7 +134,8 @@ section {
     margin-top: 10px;
 }
 
-#contato input, #contato textarea {
+#contato input,
+#contato textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -104,8 +150,14 @@ section {
     padding: 10px 20px;
     margin-top: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+#contato button:hover {
+    background-color: #ff6347; /* Cor ao passar o mouse */
+}
+
+/* Rodapé */
 footer {
     background-color: #333;
     color: white;
