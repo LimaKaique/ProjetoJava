@@ -33,3 +33,32 @@ header nav ul li a {
     color: white;
     text-decoration: none;
 }
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#planos .planos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#planos .plano {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+}
+
+#planos .plano h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#planos .plano .preco {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}

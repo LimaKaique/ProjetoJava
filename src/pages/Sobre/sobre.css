@@ -7,6 +7,7 @@
 
 /* Definição de cores e fontes */
 body {
+    background-image: url(/assets/images/fundo.img.jpg) ;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
