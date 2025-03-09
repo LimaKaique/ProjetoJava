@@ -1,0 +1,115 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definição de cores e fontes */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.banner {
+    background-image: url('https://via.placeholder.com/1500x600');
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+    color: white;
+}
+
+.banner h1 {
+    font-size: 50px;
+}
+
+.banner p {
+    font-size: 20px;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#planos .planos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#planos .plano {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+}
+
+#planos .plano h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#planos .plano .preco {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#contato form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contato label {
+    display: block;
+    margin-top: 10px;
+}
+
+#contato input, #contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contato button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
