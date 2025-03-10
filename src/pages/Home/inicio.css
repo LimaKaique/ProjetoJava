@@ -16,8 +16,8 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #333;
-    color: white;
+    background-color: #000; /* Fundo preto */
+    color: white; /* Texto branco */
     padding: 10px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
@@ -33,14 +33,15 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: white; /* Texto branco */
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease-in-out;
 }
 
 header nav ul li a:hover {
-    color: #ff6347; /* Cor do link ao passar o mouse */
+    color: #fff; /* Branco no hover */
+    text-decoration: underline;
 }
 
 /* Seção inicial com banner */
@@ -48,7 +49,7 @@ header nav ul li a:hover {
     position: relative;
     width: 100%;
     height: 100vh; /* Usa a altura total da tela */
-    background-image: url(/assets/images/fundo.img.jpg); 
+    background-image: url(/assets/images/fundo.img.jpg);
     background-size: cover;
     background-position: center center;
     color: white;
@@ -86,6 +87,7 @@ header nav ul li a:hover {
 section {
     padding: 50px 20px;
     text-align: center;
+    color: #333; /* Cor do texto em todas as seções */
 }
 
 /* Estilos para os planos de assinatura */
@@ -93,37 +95,42 @@ section {
     display: flex;
     justify-content: center;
     gap: 30px;
+    margin-top: 50px;
 }
 
 #planos .plano {
-    background-color: #fff;
+    background-color: #fff; /* Fundo branco */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 250px;
     transition: transform 0.3s ease-in-out;
+    text-align: center;
 }
 
 #planos .plano:hover {
     transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
 }
 
 #planos .plano h3 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #333; /* Título preto */
 }
 
 #planos .plano .preco {
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
+    color: #000; /* Preço preto */
 }
 
 /* Formulário de contato */
 #contato form {
     max-width: 500px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #fff; /* Fundo branco */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -132,6 +139,8 @@ section {
 #contato label {
     display: block;
     margin-top: 10px;
+    font-size: 1rem;
+    color: #333; /* Texto das labels em preto */
 }
 
 #contato input,
@@ -141,27 +150,66 @@ section {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1rem;
 }
 
 #contato button {
-    background-color: #333;
-    color: white;
+    background-color: #000; /* Fundo preto */
+    color: white; /* Texto branco */
     border: none;
     padding: 10px 20px;
     margin-top: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
 #contato button:hover {
-    background-color: #ff6347; /* Cor ao passar o mouse */
+    background-color: #fff; /* Fundo branco no hover */
+    color: #000; /* Texto preto no hover */
 }
 
 /* Rodapé */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #000; /* Fundo preto */
+    color: white; /* Texto branco */
     text-align: center;
     padding: 20px 0;
     margin-top: 50px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave no topo do rodapé */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .banner h1 {
+        font-size: 2.5em; /* Menor título em telas pequenas */
+    }
+
+    #planos .planos-container {
+        flex-direction: column; /* Exibe os planos em coluna em telas pequenas */
+    }
+
+    #planos .plano {
+        width: 100%; /* A largura dos planos será 100% em dispositivos móveis */
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 15px 0;
+    }
 }

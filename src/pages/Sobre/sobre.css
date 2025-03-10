@@ -7,18 +7,23 @@
 
 /* Definição de cores e fontes */
 body {
-    background-image: url(/assets/images/fundo.img.jpg) ;
+    background-image: url(/assets/images/fundo.img.jpg); /* Fundo de imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
+/* Estilos para o cabeçalho */
 header {
-    background-color: #333;
-    color: white;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
     padding: 10px 0;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
 header nav ul {
@@ -33,7 +38,18 @@ header nav ul li {
 header nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
+
+header nav ul li a:hover {
+    background-color: #fff; /* Branco no hover */
+    color: #000; /* Texto preto no hover */
+}
+
+/* Estilos para o conteúdo da página sobre */
 .pagina-sobre {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -42,10 +58,10 @@ header nav ul li a {
     color: #333;
 }
 
-/* Estilos para o cabeçalho */
+/* Estilos para o cabeçalho da seção */
 .cabecalho {
-    background-color: #333;
-    color: #fff;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
     padding: 20px 0;
     text-align: center;
 }
@@ -53,17 +69,18 @@ header nav ul li a {
 .cabecalho-titulo {
     margin: 0;
     font-size: 2rem;
+    font-weight: bold;
 }
 
 /* Estilos para a navegação */
 .navegacao {
-    background-color: #444;
+    background-color: #000; /* Fundo preto */
     padding: 10px;
     text-align: center;
 }
 
 .navegacao-link {
-    color: #fff;
+    color: #fff; /* Texto branco */
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
@@ -79,36 +96,119 @@ header nav ul li a {
     margin: 20px auto;
     margin-top: 200px;
     max-width: 800px;
-    background-color: #111111;
+    background-color: #000; /* Fundo preto */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    color: #fff; /* Texto branco */
+    text-align: center;
 }
 
 .secao-titulo {
-    color: #333;
-    border-bottom: 2px solid #333;
+    color: #fff; /* Título branco */
+    border-bottom: 2px solid #fff; /* Linha branca embaixo do título */
     padding-bottom: 10px;
-    font-size: 1.8rem;
-    text-align: center; /* Centraliza apenas o título */
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .secao-texto {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 15px;
-    text-align: center; /* Centraliza apenas os parágrafos */
+    text-align: center;
 }
 
 /* Estilos para o rodapé */
 .rodape {
-    background-color: #333;
-    color: #fff;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
     text-align: center;
-    padding: 10px 0;
-    margin-top: 400px;
+    padding: 20px 0;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave no topo */
 }
 
 .rodape-texto {
     margin: 0;
     font-size: 0.9rem;
+}
+
+/* Alterações gerais para manter o contraste alto */
+a {
+    color: #fff; /* Links brancos */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #000; /* Links para preto no hover */
+}
+
+/* Estilo de botões e links */
+button, .btn-link {
+    background-color: #000; /* Fundo preto */
+    color: white; /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn-link:hover {
+    background-color: #fff; /* Cor de fundo branco no hover */
+    color: #000; /* Texto preto no hover */
+}
+
+/* Estilo de imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Títulos e textos principais em seções */
+h1, h2, h3 {
+    font-weight: bold;
+    color: #fff; /* Títulos brancos */
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #fff; /* Subtítulos em branco */
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .navegacao-link {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .cabecalho-titulo {
+        font-size: 1.5rem;
+    }
+
+    .secao-sobre {
+        padding: 30px 15px;
+    }
+
+    .secao-titulo {
+        font-size: 1.5rem;
+    }
+
+    .rodape {
+        font-size: 0.8rem;
+        padding: 15px 0;
+    }
 }

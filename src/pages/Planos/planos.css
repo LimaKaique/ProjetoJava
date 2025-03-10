@@ -7,58 +7,288 @@
 
 /* Definição de cores e fontes */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    margin: 0;
+    padding: 0;
 }
 
+/* Estilo do cabeçalho (Header) */
 header {
-    background-color: #333;
+    background-color: #000; /* Cabeçalho preto */
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
 header nav ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 header nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
-}
-section {
-    padding: 50px 20px;
-    text-align: center;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
+header nav ul li a:hover {
+    background-color: #fff; /* Cor de destaque no hover */
+    color: #000; /* Texto preto no hover */
+}
+
+/* Estilo da seção de planos com fundo de imagem ocupando a tela inteira */
+#planos {
+    padding: 80px 20px; /* Mais espaçamento */
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-image: url('https://via.placeholder.com/1920x800'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixo na tela */
+    color: #fff; /* Texto branco para contrastar com o fundo */
+    border-radius: 8px;
+    min-height: 100vh;
+}
+
+#planos h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para o título */
+    text-transform: uppercase;
+}
+
+/* Estilo dos planos */
 #planos .planos-container {
-    display: flex;
-    justify-content: center;
+    display: grid; /* Usando grid para responsividade */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta a quantidade de colunas */
     gap: 30px;
+    margin-top: 40px;
 }
 
 #planos .plano {
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 250px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de hover */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 350px;
+    margin: 0 auto;
+    height: 400px;
+}
+
+#planos .plano:hover {
+    transform: translateY(-10px); /* Elevação ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra mais forte no hover */
 }
 
 #planos .plano h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #fff; /* Texto branco */
 }
 
 #planos .plano .preco {
-    font-size: 20px;
+    font-size: 1.8em;
     font-weight: bold;
+    margin-top: 20px;
+    color: #ff6347; /* Cor chamativa para o preço */
+}
+
+#planos .plano p {
+    font-size: 1.2em;
+    color: #ddd; /* Texto cinza claro */
+    margin-bottom: 20px;
+}
+
+/* Botões de ação (Inscreva-se) */
+.btn-inscricao {
+    display: inline-block;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-inscricao:hover {
+    background-color: #e55347; /* Cor mais escura no hover */
+}
+
+/* Estilo da seção de Perguntas Frequentes (FAQ) */
+/* Estilo da seção de Perguntas Frequentes (FAQ) */
+.faq {
+    background-color: #222; /* Fundo escuro para FAQ */
+    padding: 50px 20px;
+    margin-top: 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra forte para destaque */
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq h3 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #ff6347; /* Cor chamativa para o título */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+}
+
+/* Estilo para cada pergunta */
+.faq ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.faq ul li {
+    font-size: 1.2em;
+    color: #ddd;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444; /* Linha fina entre perguntas */
+    padding-bottom: 15px;
+    cursor: pointer; /* Indicando que é clicável */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+.faq ul li:hover {
+    background-color: #444; /* Cor mais escura ao passar o mouse */
+    color: #fff;
+}
+
+/* Animação de resposta (expandir/contrair) */
+.faq ul li.active {
+    background-color: #333;
+}
+
+.faq ul li .resposta {
+    display: none;
+    font-size: 1.1em;
+    color: #bbb;
     margin-top: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+
+/* Mostrar resposta quando a pergunta estiver ativa */
+.faq ul li.active .resposta {
+    display: block;
+    opacity: 1;
+}
+
+.faq ul li .resposta p {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Estilo de ícones de expandir/clicar (seta) */
+.faq ul li .seta {
+    float: right;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.faq ul li.active .seta {
+    transform: rotate(180deg); /* Rotação da seta ao expandir a resposta */
+}
+
+.faq ul li .seta:before {
+    content: "↓"; /* Setas indicativas */
+}
+
+
+/* Tabela comparativa (opcional) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table, th, td {
+    border: 1px solid #444; /* Borda escura */
+    text-align: center;
+}
+
+th, td {
+    padding: 12px;
+}
+
+th {
+    background-color: #222;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #333;
+    color: #ddd;
+}
+
+/* Estilo de imagens de planos */
+.imagem-plano {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #000; /* Fundo preto para o rodapé */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave no topo do footer */
+}
+
+/* Responsividade: Ajustes para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #planos .planos-container {
+        grid-template-columns: 1fr; /* Exibe apenas uma coluna de planos em telas menores */
+    }
+
+    #planos h2 {
+        font-size: 2.5em; /* Ajuste no tamanho do título */
+    }
 }
